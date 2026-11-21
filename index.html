@@ -82,6 +82,16 @@ details.more-proof{background:transparent;border-radius:0;margin:6px 0 0;overflo
 .more-proof .cases{margin-top:4px}
 .tbl tr.hid{display:none!important}
 .more-btn{display:block;width:100%;margin:-2px 0 14px;padding:10px;border:1px dashed var(--bg);background:transparent;color:var(--bg);font:600 15px 'Barlow',system-ui,sans-serif;border-radius:10px;cursor:pointer}
+details.proof{background:linear-gradient(135deg,#ffd36b,#ffb347);border:0;color:#2b1a00;margin:26px 0 12px;box-shadow:0 6px 18px rgba(0,0,0,.2)}
+.proof>summary{min-height:68px;padding:12px 16px}
+.proof>summary:focus-visible{outline-color:#2b1a00}
+.proof .more-proof summary{color:#2b1a00}
+.proof>summary::after{content:"▾";font-size:18px;margin-left:auto}
+.proof[open]>summary::after{content:"▴"}
+.pw{display:flex;flex-direction:column;gap:2px}
+.pt{font:700 34px/1 'Barlow Condensed','Arial Narrow',sans-serif}
+.ps{font-size:14px;font-weight:600;color:#4a2e00}
+.proof>.cases,.proof>.more-proof{margin:0 12px 12px}
 @media (prefers-reduced-motion:reduce){.chev{transition:none}}
 </style>
 </head>
@@ -100,12 +110,12 @@ details.more-proof{background:transparent;border-radius:0;margin:6px 0 0;overflo
 <section class="feat">
 <span class="pill">🎁 Comece grátis · para OSCs</span>
 <h2>Mentoria, diagnóstico e análise de edital sem custo</h2>
-<p>Descubra o melhor caminho para sua OSC (organização da sociedade civil) antes de investir em um projeto completo.</p>
+<p>Descubra o melhor caminho para sua organização da sociedade civil (OSC) antes de investir.</p>
 <a class="cta" data-msg="Olá, equipe SOMMA! Represento uma OSC e gostaria de agendar uma orientação técnica sem custo. Poderiam me orientar sobre os próximos passos? (via Instagram)">Agendar minha orientação técnica</a>
-<small>Atendimento pelo WhatsApp</small>
 </section>
 
-<h2 class="sec-t">Projetos aprovados</h2>
+<details class="proof">
+<summary><div class="pw"><span class="pt">+ de R$ 600 mil</span><span class="ps">em recursos aprovados · toque para ver</span></div></summary>
 <div class="cases">
 <article class="case"><div class="top"><span class="amt">R$ 500.000,00</span><span class="lbl">Contemplado</span></div>
 <h3>Educar Com Arte: Trilhas de Imaginação, Números e Natureza</h3>
@@ -127,6 +137,7 @@ details.more-proof{background:transparent;border-radius:0;margin:6px 0 0;overflo
 <h3>Divas Criativas e Rede Tê’Art Social</h3>
 <p>Recursos da Enel Ceará</p></article>
 </div>
+</details>
 </details>
 
 <h2 class="sec-t">Nossos serviços</h2>
